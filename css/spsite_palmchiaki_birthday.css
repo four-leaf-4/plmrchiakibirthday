@@ -1,0 +1,418 @@
+﻿@charset "utf-8";
+/*common*/
+html,body{
+	font-size:1em;
+	line-height:1.4;
+	font-family:"ヒラギノ明朝 ProN W3","Hiragino Mincho ProN","ヒラギノ明朝 ProN W6","HiraMinProN-W6",'Noto Serif JP',serif;
+	}
+body{
+	background-color:#f0f9f8;
+	height:auto;
+	overflow:auto;
+	box-sizing:border-box;
+	counter-reset:num_headline;
+	}
+div{
+	box-sizing:border-box;
+	}
+img{
+	display: block;
+    width: 100%;
+	}
+span.sup{
+	font-size: 0.5em;
+    vertical-align: super;
+	}
+/*common end*/
+/*header and footer start*/
+header,footer{
+    padding: 5px 15px;
+    margin: auto;
+	background-color: #2f333f;
+	}
+header ul,footer ul{
+	list-style:none;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+	align-items:center;
+    max-width:100%;
+    width:100%;
+    margin:0 auto;
+	}
+header li[class^="side_"]{}
+header ul a,
+footer ul a{
+	display: block;
+	}
+header ul .logo_ecap{
+	max-width:220px;
+	width:100%;	
+	}
+footer ul .logo_capcom{
+	max-width:110px;
+	width:100%;
+	}
+header .logo_ecap_yahoo{
+    max-width: 300px;
+    width: 100%;
+}
+header .logo_ecap_rakuten{
+	max-width:200px;
+	width:100%;
+	}
+header ul .btn_twshare{
+	max-width:50px;
+    width:100%;
+	min-width:32px;
+    height:auto;
+	}
+footer{
+	color:#fff;
+	}
+footer .copyright{
+	text-align: right;
+	font-size: 0.5rem;
+	}
+/*header and footer end*/
+/*headline start*/
+h1{
+	font-size:2rem;
+	}
+h2{
+    max-width: 980px;
+    width: 100%;
+    margin: auto;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #2f333f;
+    padding: 1rem 0;
+    background-color: #F6D703;
+	}
+h3{
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 1rem 0;
+    color: #fff;
+    background-color: #2f333f;
+    border-top: 5px solid #f6d703;
+	}
+h3 span{
+	display:block;
+	}
+h3 .item_name{
+	color:#F6D703;
+	}
+h6:before{
+    counter-increment:num_headline;
+    content:"第"counter(num_headline)"章";	
+	}
+/*headline end*/
+/*spec start*/
+.spec table{
+	width: auto;
+    table-layout: fixed;
+    font-size: 0.8rem;
+    box-sizing: border-box;
+    line-height: 2;
+	}
+.spec th{
+	width:7em;
+	}
+.spec td{
+	display:flex;
+	width:20em;
+	}
+.spec td:before{
+	content:"：";
+	display:block;
+	}
+/*spec end*/
+/*list start*/
+ul[class^="list_"]{
+    counter-reset: list_num;
+    max-width: 640px;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+	}
+ul[class^="list_"] li{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+	}
+ul[class^="list_"] li:before{
+    counter-increment: list_num;
+    content:"※"counter(list_num);
+	padding: 0 0.5em 0 0;
+	}
+/*list end*/
+/*top start*/
+.top_visual{
+	width:100%;
+	}
+.top_visual_pc{
+	max-width:980px;
+	width:100%;
+	margin:auto;
+	}
+.top_visual_sp{
+	display:none;
+	}
+@media screen and (max-width:426px){
+	.top_visual_pc{
+		display:none;
+		}
+	.top_visual_sp{
+		display:block;
+		}
+	}
+/*top end*/
+/*catch copy start*/
+.catchcopy{
+	max-width:980px;
+	width:100%;
+	margin:auto;	
+	}
+.catchcopy h1{
+	padding: 2rem 1rem;
+	text-align: center;
+	word-break: keep-all;
+	color: #2f333f;
+	background-color: #f6d703;	
+	}
+.catchcopy p{
+	max-width: 30em;
+	width: 100%;
+	margin: auto;
+	padding: 2rem 1rem 0;
+	text-align: center;
+	box-sizing: border-box;
+	}
+/*catch copy end*/
+/*term order start*/
+.term_order{
+  max-width: 40em;
+  width: 100%;
+  margin: 4em auto;
+  padding:0 1rem;
+	box-sizing: border-box;
+	}
+.term_order dl{
+  padding: 1rem;
+  border: 2px solid #2f333f;	
+	}
+.term_order dt,
+.term_order dd{
+	text-align: center;
+	}
+.term_order dt{
+	font-size:1.25rem
+	}
+.term_order dd{
+	font-size: 1.5rem;
+	}
+.term_order .note{
+	list-style: none;
+	text-align: left;
+	width: 100%;
+	font-size:0.875rem;
+	color: #cc0000;
+	box-sizing: border-box;
+	}
+.term_order .note{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	}
+.term_order .note:before{
+	display: block;
+	content:"※";
+	padding: 0 0.5em 0 0;
+	}
+@media screen and (max-width:48em){
+	.catchcopy h1{
+		font-size:1.5rem;
+		}
+	}
+/*term order end*/
+[class^="lineup_"]{
+	max-width: 980px;
+    width: 100%;
+    margin: 4rem auto;
+    background-color: #a3aaae;
+	}
+[class^="ecap_only_"]{
+	padding:1rem;
+	}
+[class^="about_"]{
+	background-color: #fff;
+    padding: 2rem;
+	}
+[class="about_acrylic_art"]{
+	margin: 0 0 4rem 0;
+	}
+[class^="about_"] p{
+	max-width: 35em;
+    width: 100%;
+    margin: auto;
+	}
+[class^="about_"] p strong{
+	color:#4fb6a5;
+	}
+
+.btn_reserve{
+	display: block;
+    width: 100%;
+    margin:0;
+    text-align: center;
+    text-decoration: none;
+    background-color: #2f333f;
+    font-size: 1rem;
+    color: #fff;
+    padding: 1.25rem 0;
+	background-image:url(../img/btn_bg_triangle.png);
+	background-repeat:no-repeat;
+    background-position: 98% 80%;
+    background-size: 30px;
+	}
+.lineup_other_goods [class^="goods_"]{
+	max-width: 300px;
+	width: 100%;
+	background-color: #fff;
+	border: 2px solid #2f333f;
+	margin: 1rem 0.5rem;
+	box-sizing: border-box;
+	list-style:none;
+	}
+.lineup_other_goods [class="inner_other_goods"]{
+	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+	flex-wrap:nowrap;
+	}
+.detail_goods{
+	width:100%;
+	}
+.detail_goods .name{
+	font-size: 1.5rem;
+	text-align: center;
+	padding: 1rem 0;
+	color: #fff;
+	background-color: #2f333f;	
+	}
+.detail_goods dd{
+	padding:0 1rem;
+	}
+.detail_goods dd:last-child{
+	padding:0 1rem 1rem;
+	}
+.detail_goods .price{
+	margin: 1rem 0;
+	text-align:center;
+	}
+.detail_goods .price:before{
+	content:"価格:";
+	}
+.detail_goods .price:after{
+	content:"円+税";
+	}
+@media screen and (max-width:48em){
+.lineup_other_goods [class="inner_other_goods"]{
+	flex-wrap: wrap;
+	}
+}
+.bnr_official{
+	background-color: #2f333f;
+    padding:4rem 1rem;
+	}
+.bnr_official a{
+	display: block;
+    max-width: 900px;
+    width: 100%;
+    margin: auto;
+	}
+.btn_totop{
+    position: fixed;
+	max-width:40px;
+	width:100%;
+	bottom:1rem;
+	right:1rem;
+	}
+.btn_totop.translate{
+	opacity:0.8;
+	}
+/*warning page start*/
+.bg_top_visual.warning{
+	padding:8rem 0;
+	}
+.confirm{
+	padding: 0 0 4rem 0;
+	}
+.confirm .go_or_back{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+	flex-wrap: wrap;
+	max-width: 50em;
+    width: 100%;
+    margin: auto;
+	}
+.confirm .go_or_back a{
+    display: block;
+    max-width: 15em;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #2f333f;
+    padding: 2rem 1rem;
+    border-radius: 5px;
+    box-shadow:2px 2px 4px 0px rgba(24, 27, 35, 0.3);
+    box-sizing: border-box;
+	margin: 1rem;
+	transition:all 0.3s;
+	}
+.confirm .go_or_back a:hover{
+	box-shadow:2px 2px 4px 0px rgba(24, 27, 35, 0.0);
+	}
+.confirm .go_or_back .go{
+	background-color: #f6d703;
+	}
+.confirm .go_or_back .back{
+	background-color: #4fb6a5;
+	}
+.confirm .go_or_back span:nth-of-type(2){
+	display: block;
+	font-size:1rem;
+	}
+.go_or_back img{
+    max-width: 70px;
+    margin: auto;
+    padding: 1rem 0 0 0;
+	transition:transform 0.3s;
+	}
+.confirm .go_or_back .go:hover{
+	background-color: #fff;
+	}
+.confirm .go_or_back .go:hover img,
+.confirm .go_or_back .back:hover img{
+	transform: translateX(20px);
+	}
+.confirm .go_or_back .back:hover{
+	background-color: #999999;
+	}
+@media screen and (max-width:426px){
+	.bg_top_visual.warning{
+		padding:0 0 2rem 0;
+		}
+	.warning_list_box{
+	    padding: 1rem;
+		border-radius: 0;
+		border: 1px solid #f0f9f8;
+		flex-wrap: wrap;
+		justify-content: center;
+		}
+	}
+/*warning page end*/
